@@ -1,0 +1,98 @@
+/* Blog post layout using grid */
+.blog-container {
+    display: grid;
+    grid-template-areas: 
+        "post"
+        "related";
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.blog-post {
+    grid-area: post;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Author info with avatar */
+.author-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.author-info::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url('/assets/images/author.png'); /* Set avatar URL */
+    background-size: cover;
+    background-position: center;
+    margin-right: 1rem;
+}
+
+/* Related posts section */
+.related-posts {
+    grid-area: related;
+    background-color: #f4f4f4;
+    padding: 1rem;
+}
+
+/* Blog card image background */
+.blog-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card::before {
+    content: "";
+    width: 100%;
+    height: 200px;
+    background-image: url('/assets/images/blog1.png'); /* Blog post image 1 */
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-card:nth-child(2)::before {
+    background-image: url('/assets/images/blog2.png'); /* Blog post image 2 */
+}
+
+.blog-content {
+    padding: 1rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Footer layout */
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
+}
+.social-links{
+    color: aqua;
+    font-size: medium;
+}

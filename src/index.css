@@ -1,0 +1,107 @@
+/* Grid layout for the entire page */
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "content"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    height: 100vh;
+}
+
+/* Header layout */
+.header {
+    display: flex;
+    grid-area: header;
+    background-color: #193ee7;
+    padding: 1rem;
+    color: white;
+}
+
+/* Navbar within the header */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar a {
+    color: rgb(28, 56, 179);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Main content section (Blog list) */
+.blog-list {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+/* Blog card layout */
+.blog-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog image placeholder - Using background images */
+.blog-img {
+    width: 100%;
+    height: 200px;
+    background-image: url('/assets/images/blog1.png'); /* Image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-img-2 {
+    background-image: url('/assets/images/blog2.png'); /* Second image URL */
+}
+
+.blog-img-3 {
+    background-image: url('/assets/images/blog3.png'); /* Third image URL */
+}
+
+/* Blog content */
+.blog-content {
+    padding: 1rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Footer layout */
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .blog-list {
+        grid-template-columns: 1fr;
+    }
+}
+.social-links{
+    color: aqua;
+    font-size: medium;
+}
