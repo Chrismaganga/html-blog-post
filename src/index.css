@@ -1,4 +1,9 @@
 /* Grid layout for the entire page */
+* {
+    padding: 0;
+    margin: 0%;
+    
+}
 .grid-container {
     display: grid;
     grid-template-areas: 
@@ -8,6 +13,7 @@
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr;
     height: 100vh;
+    margin: 10px;
 }
 
 /* Header layout */
@@ -70,7 +76,10 @@
 .blog-content {
     padding: 1rem;
 }
-
+body{
+    background-color: black;
+    height: max-content;
+}
 .btn {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
@@ -82,14 +91,16 @@
     width: 100%;
 }
 
-/* Footer layout */
+/* Footer layout */ */
 .footer {
     grid-area: footer;
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1rem;
+    margin: 10px;
 }
+
 
 /* Responsive design */
 @media (max-width: 768px) {
@@ -100,8 +111,4 @@
     .blog-list {
         grid-template-columns: 1fr;
     }
-}
-.social-links{
-    color: aqua;
-    font-size: medium;
 }
