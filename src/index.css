@@ -1,4 +1,3 @@
-/* Grid layout for the entire page */
 * {
     padding: 0;
     margin: 0%;
@@ -16,7 +15,6 @@
     margin: 10px;
 }
 
-/* Header layout */
 .header {
     display: flex;
     grid-area: header;
@@ -25,7 +23,7 @@
     color: white;
 }
 
-/* Navbar within the header */
+
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -37,7 +35,7 @@
     font-size: 1.2rem;
 }
 
-/* Main content section (Blog list) */
+
 .blog-list {
     grid-area: content;
     display: grid;
@@ -45,9 +43,9 @@
     gap: 20px;
     padding: 2rem;
     background-color: #f4f4f4;
+   
 }
 
-/* Blog card layout */
 .blog-card {
     background-color: white;
     display: flex;
@@ -55,24 +53,22 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Blog image placeholder - Using background images */
 .blog-img {
     width: 100%;
     height: 200px;
-    background-image: url('/assets/images/blog1.png'); /* Image URL */
+    background-image: url('/assets/images/blog1.png');
     background-size: cover;
     background-position: center;
 }
 
 .blog-img-2 {
-    background-image: url('/assets/images/blog2.png'); /* Second image URL */
+    background-image: url('/assets/images/blog2.png');
 }
 
 .blog-img-3 {
-    background-image: url('/assets/images/blog3.png'); /* Third image URL */
+    background-image: url('/assets/images/blog3.png'); 
 }
 
-/* Blog content */
 .blog-content {
     padding: 1rem;
 }
@@ -81,7 +77,7 @@ body{
     height: max-content;
 }
 .btn {
-    margin-top: 1rem;
+    margin-top: 10rem;
     padding: 0.5rem 1rem;
     background-color: #007BFF;
     color: white;
@@ -89,20 +85,20 @@ body{
     border: none;
     cursor: pointer;
     width: 100%;
+    gap: 10px;
 }
 
-/* Footer layout */ */
 .footer {
     grid-area: footer;
     background-color: #333;
     color: white;
     text-align: center;
+    justify-content: center;
     padding: 1rem;
     margin: 10px;
 }
 
 
-/* Responsive design */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -111,4 +107,8 @@ body{
     .blog-list {
         grid-template-columns: 1fr;
     }
+}
+p {
+    padding: 5px;
+    margin: 10px;
 }

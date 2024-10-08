@@ -41,7 +41,8 @@
 .related-posts {
     grid-area: related;
     background-color: #f4f4f4;
-    padding: 1rem;
+    padding: 5rem;
+    margin: 5px;
 }
 
 .blog-card {
@@ -130,3 +131,17 @@
 
 /* Ensure the blog card grows to push social links to the bottom */
 
+.url {
+    margin: 5px;
+    color: #086e2f;
+    padding: 5px;
+    justify-items: auto;
+    
+
+}
+.heading {
+    color: #1307b8;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    
+}
